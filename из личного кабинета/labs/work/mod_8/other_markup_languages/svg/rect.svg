@@ -1,0 +1,14 @@
+<?xml-stylesheet href="rect.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				rect{
+					fill:#ccf;
+					stroke-width:3;
+				}
+			]]>
+		</style>
+	</defs>
+	<rect x="30" y="30" width="300" height="300" rx="40" ry="40" style="stroke:#369;"/>
+</svg>

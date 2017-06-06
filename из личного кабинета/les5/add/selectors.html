@@ -1,0 +1,547 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+h2 {font-family:arial; border-top:1px solid #eee; margin-top:20px; padding-top:10px; font-weight:normal; }
+h2 span {display:block; font-weight:normal;
+ font-size:60%; padding-top:5px }
+</style>
+
+<h4  style="color:red">
+Внимание! Этот код не является валидным и предназначен только для демонстрации работы селекторов
+</h4>
+
+<!---------------------------->
+<h2>1) * 
+<span>Выбор всех элементов</span></h2>
+
+<style>
+.example1 * {color:brown}
+</style>
+<div class="example1">
+<p>Текст1</p>
+<div id="id1">Текст2</div>
+<h3 class="class1">Текст3</h3>
+</div>
+<!---------------------------->
+
+<h2>2) #id 
+<span>Выбор элемента с идентификатором id</span></h2>
+
+<style>
+#example2 {color:red }
+</style>
+<p>текст
+<p id="example2">текст2
+<p>текст
+
+<!---------------------------->
+
+<h2>3) .class
+<span>Выбор элементов с классом class</span></h2>
+
+<style>
+.example3 {color:red }
+</style>
+<p>текст
+<p class="example3">текст2
+<p class="example3">текст3
+<p>текст
+
+<!---------------------------->
+
+<h2>4) selector
+<span>Выбор элементов по имени тега selector</span></h2>
+
+<style>
+blockquote {color:red }
+</style>
+<p>текст
+<blockquote>текст блочной цитаты</blockquote>
+<p>текст3
+<p>текст
+
+<!---------------------------->
+
+<h2>5) selector1 selector2
+<span>Контекстуальный – выбор элементов (selector2) внутри элемента (selector1) на любом уровне</span></h2>
+
+<style>
+.example5 li {color:red}
+</style>
+
+<ul class="example5">
+  <li>Элемент списка1</li>
+  <li>Элемент списка2
+         <ul>
+	<li>Элемент списка2.1</li>
+	<li>Элемент списка2.2</li>
+         </ul>
+  <li>Элемент списка3</li>
+</ul>
+
+<!---------------------------->
+
+<h2>6) selector1 > selector2
+<span>Выбор только дочерних элементов (selector2) внутри элемента (selector1)</span></h2>
+
+<style>
+.example6 > li {color:red}
+</style>
+<ul class="example6">
+  <li>Элемент списка1</li>
+  <li>Элемент списка2
+         <ul>
+	<li>Элемент списка2.1</li>
+	<li>Элемент списка2.2</li>
+         </ul>
+  <li>Элемент списка3</li>
+</ul>
+
+<!---------------------------->
+
+<h2>7) selector1 + selector2
+<span>Выбор элемента (selector2), следующего за элементом (selector1)</span></h2>
+
+<style>
+.example7 + li {color:red}
+</style>
+<ul >
+  <li class="example7">Элемент списка1</li>
+  <li>Элемент списка2
+         <ul>
+	<li>Элемент списка2.1</li>
+	<li>Элемент списка2.2</li>
+         </ul>
+  <li>Элемент списка3</li>
+</ul>
+
+<!---------------------------->
+
+<h2>8) selector1 ~ selector2
+<span>Выбор элементов (selector2), следующих за элементом (selector1)</span></h2>
+
+<style>
+.example8 ~ li {color:red}
+</style>
+<ul>
+  <li class="example8">Элемент списка1</li>
+  <li>Элемент списка2
+         <ul>
+	<li>Элемент списка2.1</li>
+	<li>Элемент списка2.2</li>
+         </ul>
+  <li>Элемент списка3</li>
+</ul>
+
+<!---------------------------->
+
+<h2>9) [attribute]
+<span>Выбор элементов, у которых присутствует указанный атрибут</span></h2>
+
+<style>
+[align] {color:red}
+</style>
+<p>Текст1
+<p align="left">Текст2
+<p>Текст3
+
+<!---------------------------->
+
+<h2>10) [attribute=value]
+<span>Выбор элементов с указанным атрибутом и его значением</span></h2>
+
+<style>
+[title="Тег"] {color:red}
+</style>
+<p>Текст1
+<p title="Тег">Текст2
+<p>Текст3
+
+<!---------------------------->
+
+<h2>11) [attribute~=value]
+<span>Выбор элементов, у которых атрибут включает заданную комбинацию символов, пробел выполняет роль разделителя</span></h2>
+
+<style>
+[title~="описание"] {color:red}
+</style>
+<span>text1</span >
+<span title="описание элемента1">text2</span >
+<span title="описание элемента2">text3</span >
+<span title="описание3">text4</span >
+
+<!---------------------------->
+
+<h2>12) [attribute|=value] 
+<span>Выбор элементов, у которых атрибут начинается с заданной комбинации символов и разделяется знаком "-"
+</span></h2>
+
+<style>
+.example12 span[lang|="EN"] {color:red}
+</style>
+<div class="example12">
+	<span lang="RU-RU">text1</span>
+	<span lang="EN-US">text2</span>
+	<span lang="EN-UK">text3</span>
+</div>
+<!---------------------------->
+
+<h2>13) [attribute^=value]
+<span>Выбор элементов, у которых атрибут начинается с заданной комбинации символов</span></h2>
+
+<style>
+[href^="https://"] {color:red}
+</style>
+<a href="http://mysite.ru">Мой сайт</a>
+<a href="https://mysite.ru/admin">Мой сайт</a>
+<a href="http://mysite.info">Мой сайт</a>
+
+<!---------------------------->
+
+<h2>14) [attribute$=value]
+<span>Выбор элементов, у которых атрибут заканчивается на заданной комбинации символов</span></h2>
+
+<style>
+[src$="jpg"] {border:1px solid red; }
+</style>
+<img src="1.jpg">
+<img src="2.png">
+<img src="3.gif">
+<img src="4.jpg">
+
+<!---------------------------->
+
+<h2>15) [attribute*=value]
+<span>Выбор элементов, значение атрибута которых содержит указанную комбинацию символов</span></h2>
+
+<style>
+[href*="yoursite"] {color:red}
+</style>
+<a href="http://yoursite.ru">Мой сайт</a>
+<a href="http://yoursite.com">Мой сайт</a>
+<a href="http://oursite.info">Мой сайт</a>
+
+<!---------------------------->
+<h2>16) :link 
+<span>Выбор непосещенных гиперссылок</span></h2>
+
+<style>
+.example16:link {color:gray}
+</style>
+<a href="http://empty.emp" class="example16">Непосещенная ссылка</a>
+
+<!---------------------------->
+
+<h2>17) :visited
+<span>Выбор посещенных гиперссылок</span></h2>
+
+<style>
+.example17:visited {color:gray}
+</style>
+<a href="#" class="example17">Посещенная ссылка</a>
+
+<!---------------------------->
+
+<h2>18) :active
+<span>Выбор активной гиперссылки (по которой щелкнули)</span></h2>
+
+<style>
+.example18:active {color:gray}
+</style>
+<a href="http://yuri-pavl.com" class="example18">Активная ссылка</a>
+
+<!---------------------------->
+
+<h2>19) :hover
+<span>Выбор элемента, на который наведен курсор мыши</span></h2>
+
+<style>
+.example19:hover {color:gray}
+</style>
+<a href="http://yuri-pavl.com" class="example19">Активная ссылка</a>
+
+<!---------------------------->
+
+<h2>20) :checked
+<span>Выбор включенных флажков RADIO и CHECKBOX </span>
+</h2>
+
+<style>
+.example20 input:checked + span {background:yellow}
+</style>
+<div class="example20">
+	<input type="checkbox"><span>Книги</span><br>
+	<input type="checkbox"><span>Фильмы</span><br>
+	<input type="checkbox"><span>Музыка</span><br>
+	<input type="checkbox"><span>Игры</span><br>
+</div>  
+<!---------------------------->
+
+<h2>21) :after
+<span>Добавление после выбранного элемента символов</span></h2>
+
+<style>
+.example21 p.new:after {
+content: "new";
+color:red; position:relative; bottom:1ex; }
+</style>
+<div class="example21">
+	<p>Текст1
+	<p class="new">Текст2
+	<p>Текст2
+</div> 
+<!---------------------------->
+
+<h2>22) :before
+<span>Добавление перед выбранным элементом символов</span></h2>
+
+<style>
+.example22 p.mark:before {
+content: "*";
+color:red; position:relative; bottom:1ex; }
+</style>
+<div class="example22">
+	<p>Текст1
+	<p class="mark">Текст2
+	<p>Текст2
+</div> 
+<!---------------------------->
+
+<h2>23) :enabled и :disabled 
+<span>Выбор незаблокированных (enabled) или заблокированных (disabled) элементов формы</span></h2>
+
+<style>
+.example23 input:enabled {background:yellow}
+.example23 input:disabled {background:red}
+</style>
+<div class="example23">
+	<input type="text" value="enabled"><br>
+	<input type="text" disabled value="disabled"><br>
+	
+</div>
+
+<!---------------------------->
+
+<h2>24)  :target 
+<span>Выбирает ту цель внутренней ссылки, на которую выполнен переход
+</span></h2>
+
+<style>
+.example24 h4:target {background:yellow}
+</style>
+<div class="example24">
+	<a href="#t24a">Ссылка24a</a>
+	<a href="#t24b">Ссылка24b</a>
+	
+	<h4 id="t24a">Мишень 24a</h4>
+	<h4 id="t24b">Мишень 24b</h4>
+	<h4 id="t24c">Не мишень 24c</h4>
+</div>
+
+<!---------------------------->
+<h2>25) :lang()
+<span>Позволяет задать насткройки, характерные для языка</span></h2> 
+
+<style>
+/* Вид кавычек для немецкого языка */
+q:lang(de) {quotes: "\201E" "\201C";  }
+/* Вид кавычек для английского языка */
+q:lang(en) {quotes: "\201C" "\201D";     }
+/* Вид кавычек для русского и французского языка */ 
+q:lang(fr), q:lang(ru) { quotes: "\00AB" "\00BB";}
+</style>
+<div>  
+  <p>Цитата на французском языке: 
+  <q lang="fr">Ce que femme veut, Dieu le veut</q>.
+  <p>Цитата на немецком: 
+  <q lang="de">Der Mensch, versuche die Gotter nicht</q>.
+  <p>Цитата на английском: 
+  <q lang="en">То be or not to be</q>.
+</div>  
+<!---------------------------->
+
+<h2>26) :first-child
+<span>Выбор первого элемента из соседних</span></h2>
+
+<style>
+.example26:first-child {color:red}
+</style>
+
+<ul>
+  <li class="example26">Элемент списка1</li>
+  <li class="example26">Элемент списка2
+         <ul>
+	<li class="example26">Элемент списка2.1</li>
+	<li class="example26">Элемент списка2.2</li>
+         </ul>
+  <li class="example26">Элемент списка3</li>
+</ul>
+<div>
+<p class="example26">Просто текст
+<span class="example26">Просто текст2</span>
+<span class="example26">Просто текст3</span>
+</div>
+
+<!---------------------------->
+
+<h2>27) :nth-child(n)
+<span>Выбор n-го элемента с начала из аналогичных</span></h2>
+
+<style>
+.example27:nth-child(2) {color:red}
+</style>
+
+<ul>
+  <li class="example27">Элемент списка1</li>
+  <li class="example27">Элемент списка2
+         <ul>
+	<li class="example27">Элемент списка2.1</li>
+	<li class="example27">Элемент списка2.2</li>
+         </ul>
+  <li class="example27">Элемент списка3</li>
+</ul>
+<p class="example27">Просто текст</p>
+<p class="example27">Просто текст2</p>
+
+<!---------------------------->
+
+<h2>28) :nth-last-child(n)
+<span>Выбор n-го элемента с конца из аналогичных</span></h2>
+
+	<div class="note">
+	Примечание.
+	n может быть числом или формулой
+	:nth-last-child(odd) - нечетные элементы
+	:nth-last-child(even) - четные элементы
+	</div>
+
+<style>
+.example28:nth-last-child(1) {color:red}
+</style>
+
+<ul>
+  <li class="example28">Элемент списка1</li>
+  <li class="example28">Элемент списка2
+         <ul>
+	<li class="example28">Элемент списка2.1</li>
+	<li class="example28">Элемент списка2.2</li>
+         </ul>
+  <li class="example28">Элемент списка3</li>
+</ul>
+<p class="example28">Просто текст
+<p class="example28">Просто текст2
+
+<!---------------------------->
+
+<h2>29) :only-child
+<span>Выбор элемента, состоящего из единственного дочернего элемента</span></h2>
+
+<style>
+.example29 p:only-child {color: red;}
+</style>
+
+<div class="example29"><p> Параграф1 </p></div>
+<div class="example29">
+<p> Параграф2 </p>
+<p> Параграф3 </p>
+</div>
+
+<!---------------------------->
+
+<h2>30) :first-of-type 
+<span>Внутри родительских элементов того типа, которому принадлежит данный элемент,  выбираются первые дочерние элементы</span></h2>
+
+<style>
+.example30 dt:first-of-type {color:green}
+.example30 dd:first-of-type {color:red}
+</style>
+<dl class="example30">
+	<dt>Термин1</dt>
+		<dd>Определение1</dd>
+	<dt>Термин2<dt>
+		<dd>Определение2</dd>
+</dl>		
+<dl>
+	<dt>Термин3</dt>
+		<dd>Определение3</dd>
+	<dt>Термин4<dt>
+		<dd>Определение4</dd>
+</dl>
+<!---------------------------->
+
+<h2>31) :nth-of-type(n)
+<span>Выбор n-го элемента заданного типа</span></h2>
+
+<style>
+div.example31 address:nth-of-type(2) {color:red}
+</style>
+<div class="example31">
+	<address>Адрес1</address>
+	<address>Адрес2</address>
+</div>
+<div class="example31">
+	<address>Адрес3</address>
+	<address>Адрес4</address>
+</div>
+<!---------------------------->
+
+<h2>32) :nth-last-of-type(n)
+<span>Выбор n-го элемента с конца из аналогичных заданного типа</span></h2>
+
+<style>
+div.example32 address:nth-last-of-type(2) {color:red}
+</style>
+<div class="example32">
+	<address>Адрес1</address>
+	<address>Адрес2</address>
+</div>
+<div class="example32">
+	<address>Адрес3</address>
+	<address>Адрес4</address>
+	<address>Адрес5</address>
+</div>
+<!---------------------------->
+
+<h2>33) :root
+<span>Выбор корневого элемента</span></h2>
+
+<style>
+:root .example33 li:hover {color:red}
+</style>
+<ol class="example33">
+<li>Список1
+<li>Список2
+<li>Список3
+</ol>
+<!---------------------------->
+
+<h2>34) :not(selector)
+<span>Выбор всех элементов, кроме selector</span></h2>
+
+<style>
+.example34 li:not(#item34) {color:red}
+</style>
+<ul class="example34">
+<li>Список1
+<li id="item34">Список2
+<li>Список3
+</ul>
+<!---------------------------->
+
+<h2>35) :empty
+<span>Выбор пустых элементов (не содержащих ни текста, ни вложенных элементов)</span></h2>
+
+<style>
+.example35:empty {background:yellow; width:100px; height:20px}
+</style>
+<div  class="example35"></div>
+<p class="example35"><span>Текст2</span>
+<p class="example35">Текст3
+
+
+<!---------------------------->
+<p>Источники:
+http://www.w3schools.com/cssref/css_selectors.asp
+http://www.w3schools.com/cssref/trysel.asp
+http://tools.css3.info/selectors-test/test.html
+http://caniuse.com/

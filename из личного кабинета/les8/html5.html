@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<title>Примеры использования HTML 5</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Новое в HTML 5</h1>
+
+<article>
+
+	<section>
+		<h2>Структура HTML5</h2>
+		<figure>
+		<img src="structure-html5.gif">
+		<figcaption>
+		<pre>
+		&lt;body&gt;
+		  &lt;header&gt;...&lt;/header&gt;
+		  &lt;nav&gt;...&lt;/nav&gt;
+		  &lt;article&gt;
+			&lt;section&gt;
+			  ...
+			&lt;/section&gt;
+		  &lt;/article&gt;
+		  &lt;aside&gt;...&lt;/aside&gt;
+		  &lt;footer&gt;...&lt;/footer&gt;
+		 &lt;/body&gt;
+		</pre>
+		</figcaption>
+		</figure>
+	</section>
+	
+	<section>
+		<h2>Формы в HTML 5</h2>
+		<form>
+		<h4>Строка с заполнением</h4>
+		<input name="d" placeholder="Введите в строку поиска">
+		<input type="submit" value="Поиск">
+
+		<h4>Поле с автофокусом</h4>
+		<input id="q" autofocus>
+
+		<h4>Ползунок</h4>
+		<input type="range" min="0" max="100" step="1" value="50"> 
+		<h4>Календарь</h4>
+		<input type="date" атрибуты>
+
+		<h4>Email</h4>
+		<input type="email" name="login"></p>
+		<h4>Цвет</h4>
+		<input type="color" name="cvet" value="#ff0000">
+		<p><input type="submit">
+		</form>
+	</section>
+
+	<section>
+	<h2>Холст</h2>
+	<canvas id="example1" width="200" height="100" style="border:1px solid #000000;">
+	Тег Canvas  не поддерживается вашим браузером. 
+	</canvas>
+	<script>
+		var example = document.getElementById("example1");
+		var ctx = example.getContext('2d');
+		example.width  = 300;
+		example.height = 300;
+		ctx.strokeStyle = '#B70A02'; // меняем цвет рамки
+		ctx.strokeRect(15, 15, 266, 266);
+		ctx.strokeRect(18, 18, 260, 260);
+		ctx.fillStyle = '#AF5200'; // меняем цвет клеток
+		ctx.fillRect(20, 20, 256, 256);
+		for (i=0; i<8; i+=2)
+			for (j=0; j<8; j+=2) 
+			{
+			  ctx.clearRect(20+i*32, 20+j*32, 32, 32);
+			  ctx.clearRect(20+(i+1)*32, 20+(j+1)*32, 32, 32);
+			}
+	</script>
+	
+	</section>	
+	
+	<section>
+	<h2>Графика SVG</h2>
+	<svg xmlns="http://www.w3.org/2000/svg" style="width:400px; height:300px">
+	<circle cx="150" cy="150" r="100" fill="#ffffcc" stroke="#336699" stroke-width="10"/>
+	<circle cx="110" cy="130" r="10" fill="#ffffcc" stroke="#336699" stroke-width="10"/>
+	<circle cx="210" cy="130" r="10" fill="#ffffcc" stroke="#336699" stroke-width="10"/>
+	<ellipse cx="150" cy="60" rx="110" ry="30" fill="#999999" stroke="#999666" stroke-width="5" />
+	</svg>
+	</section>
+	
+	<section>
+		<h2>Звук</h2>
+		<audio controls>
+			<source src="" type="audio/mpeg"> <!-- sound.mp3 -->
+			Тег AUDIO не поддерживается вашим браузером. 
+			<a href="sound.mp3">Скачайте музыку</a>.
+		</audio>
+	</section>
+	
+	<section>
+		<h2>Видео</h2>
+		<video width="320" height="240" controls>
+			<source src="" type="video/mp4"> <!-- 1.mp4" -->
+			<source src="file.webm" type="video/webm">
+			<source src="file.ogv" type="video/ogg">
+			Тег VIDEO не поддерживается вашим браузером. 
+			<a href="1.mp4">Скачайте музыку</a>.
+		</video>
+	</section>
+	
+</article>
+</body>
+</html>
