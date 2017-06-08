@@ -11,9 +11,9 @@
 
 Списки могут содержать:
 <ul>
-<li>Неупорядоченную информацию (маркированный список - UL) 
-<li>Упорядоченную информацию (нумерованный список - OL)  
-<li>Определения (спискок определений - DL)  
+	<li>Неупорядоченную информацию (маркированный список - UL) 
+	<li>Упорядоченную информацию (нумерованный список - OL)  
+	<li>Определения (спискок определений - DL)  
 </ul>
 
 
@@ -21,32 +21,35 @@
 
 Маркеры списка
 <!-- содержимое списка -->
-Диск (type="disc")
-Кружок (type="circle")
-Квадрат (type="square")
-
+<ul type="square">
+	<li>Диск (type="disc")
+	<li>Кружок (type="circle")
+	<li>Квадрат (type="square")
+</ul>
 <h2>2. Нумерованный список OL</h2>
 
 Атрибуты списка:
 <!-- содержимое списка -->
-START - номер первого элемента
-TYPE - тип нумерации (1,a,A,i,I)
-reversed - обратная нумерация 
-
+<ol type="a" start="1">
+	<li>START - номер первого элемента
+	<li>TYPE - тип нумерации (1,a,A,i,I)
+	<li>reversed - обратная нумерация 
+</ol>
 
 <h2>3. Спискок определений DL</h2>
 
 Список терминов
 	<!-- содержимое списка -->
-HTML
-	HyperText Markup Language - язык разметки
-CSS
-	Cascading Style Sheets - таблицы стилей
-XML
-	eXtensible Markup Language - расширяемый язык разметки
-XSL
-	eXtensible Stylesheet Language - расширяемый язык описания стилей
-
+<dl>
+<dt>HTML
+	<dd>HyperText Markup Language - язык разметки
+<dt>CSS
+	<dd>Cascading Style Sheets - таблицы стилей
+<dt>XML
+	<dd>eXtensible Markup Language - расширяемый язык разметки
+<dt>XSL
+	<dd>eXtensible Stylesheet Language - расширяемый язык описания стилей
+</dl>
 <h2>4. Смешанный список</h2>
 
 <!-- содержание -->

@@ -20,7 +20,8 @@ GIF, JPEG, PNG и SVG.
 <p>Иллюстрация относится к inline элементам (разметка на уровне текста) и
 добавляется в код с помощью элемента IMG:
 <p style="text-align:center">
-<img src="images/img.gif"><br>
+<img src="images/img.gif"
+style="width:100%"><br>
 
 <!-- картинка -->
 <img srs="images/images.gif"
@@ -96,16 +97,22 @@ margin-left:20px">
 
 <p>Примеры файлов JPEG:
 
+<figure>
+    <figcaption>
+    Файлы высокого качества:
+    </figcaption>
+    <!-- картинки -->
+    <img src="images/a-fine.jpg"
+    ><img src="images/b-fine.jpg">
+</figure>
 
-<p>Файлы высокого качества:<br>
-<!-- картинки -->
-<img src="images/a-fine.jpg"><img
-src="images/b-fine.jpg">
-
-<p>Файлы низкого качества:<br>
-<!-- картинки -->
-<img src="images/a-bad.jpg"><img
-src="images/b-bad.jpg">
+<figure>
+    <figcaption>Файлы низкого качества:
+    </figcaption>
+    <!-- картинки -->
+    <img src="images/a-bad.jpg"
+    ><img src="images/b-bad.jpg">
+</figure>
 
 <!-- подзаголовок -->
 <h2>2. Формат GIF</h2>
@@ -139,15 +146,15 @@ src="images/b-bad.jpg">
 
 <p>Примеры файлов GIF:
 
-<p>иллюстрация с малым количеством цветов:
+<p>иллюстрация с малым количеством цветов:<br>
 <!-- картинка -->
 <img src="images/gif1.gif">
 
-<p>иллюстрация с прозрачностью:
+<p>иллюстрация с прозрачностью:<br>
 <!-- картинка -->
 <img src="images/gif2.gif">
 
-<p>иллюстрация с анимацией:
+<p>иллюстрация с анимацией:<br>
 <!-- картинка -->
 <img src="images/gif3.gif">
 
@@ -156,7 +163,7 @@ src="images/b-bad.jpg">
 
 SVG - Scalable Vector Graphic - масштабируемая векторная графика. Позволяет масштабировать без потери качества. 
 <!-- картинка -->
-images/nature.svg
+<img src="images/nature.svg">
 
 <!-- подзаголовок -->
 <h2>
@@ -164,7 +171,7 @@ images/nature.svg
 </h2>
 
 metro1.jpg
-	metro1-mini.jpg   
+  <img src="images/metro1-mini.jpg">
 
 
 <!-- подзаголовок -->
