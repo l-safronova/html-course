@@ -7,52 +7,85 @@
 
 <body >
 <h1>Регистрация</h1>
+<form>
 
-Фамилия
+<p>Фамилия
+<input type="text" name="fam">
 
-E-mail
+<p>E-mail
+<input type="text" name="em">
+<p>Пароль
+<input type="password" name="pas">
+<p>Округ Москвы
+<select name="okr">
+	<option value="0">Не выбран
+	<option value="1">центральный
+  	<option value="2">южный 
+	<option value="3">юго-западный
+	<option value="4">западный
+	<option value="5">северо-западный
+	<option value="6">северный 
+	<option value="7">северо-восточный
+	<option value="8">юго-восточный
+	<option value="9">восточный
+</select>
 
-Пароль
+<p>Пол
+<p></p><input type="radio" name="pol"
+	 value="1"> М 
+ <input type="radio" name="pol"
+	 value="2"> Ж 
+  <input type="radio" name="pol"
+ value="0" checked> Не указан 
 
-Округ Москвы
-	центральный
-  	южный 
-	юго-западный
-	западный
-	северо-западный
-	северный 
-	северо-восточный
-	юго-восточный
-	восточный
 
-Пол
-	 М 
-	 Ж 
-
-Ваши интересы
-	Компьютеры 
-	Автомобили 
-	Спорт 
-	Живопись
-	Музыка
-	Книги
-	Философия
-	Религия
-	Психология
-	Астрология
-
-Какие сайты Вы посещали в последнее время чаще
-	новостные
-	юморные
-	эротические
-	тематические
-	музыкальные
+<p>Ваши интересы
+	<label><input type="checkbox" name="c1">
+	Компьютеры</label>
 	
-Несколько слов о себе 
+	<label><input type="checkbox" name="c2">
+	Автомобили</label>
+	
+	<label><input type="checkbox" name="c3">
+	Спорт</label>
+	
+	<label><input type="checkbox" name="c4">
+	Живопись</label>
+	
+	<label><input type="checkbox" name="c5">
+	Музыка</label>
+	
+	<label><input type="checkbox" name="c6">
+	Книги</label>
+	
+	<label><input type="checkbox" name="c7">
+	Философия</label>
+	
+	<label><input type="checkbox" name="c8">
+	Религия</label>
+	
+	<label><input type="checkbox" name="c9">
+	Психология</label>
+	
+	<label><input type="checkbox" name="c10">
+	Астрология</label>
+	
 
-очистка формы
+<p>Какие сайты Вы посещали в последнее время чаще
+<select name="sait" multiple size="5">
+	<option value="1">новостные
+	<option value="2">юморные
+	<option value="3">эротические
+	<option value="4">тематические
+	<option value="5">музыкальные
+</select>
+<p>Несколько слов о себе
+<textarea name="about"></textarea>
 
-регистрация
+<p>очистка формы
 
+<p><input type="submit"
+value="регистрация">
+</form>
 </body>
 </html>

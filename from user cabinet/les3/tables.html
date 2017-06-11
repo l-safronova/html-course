@@ -23,15 +23,24 @@
   
 <h2>1. Простая таблица</h2>
  
-<table border="1">
+<table border="1" 
+  cellspacing="0"
+  cellpadding="10"
+ 
+  style="border:1px solid;
+
+        width:30%;
+        margin:auto;
+        border-collapse: collapse"
+        >
   <caption>
     Статистика использования браузеров (данные за 2009 г.)
-    </caption>
+  </caption>
     
     <thead style="background:yellow">
-  <tr>
-      <th>Браузер
-      <th>Статистика
+<tr>
+    <th>Браузер
+    <th>Статистика
     <tbody>
 <tr>
     <td>Chrome
@@ -46,44 +55,51 @@
     <td>IE 
     <td>15% 
 <tr>
-  <td>Safari
-  <td>5%
+    <td>Safari
+    <td>5%
 <tr>
-  <td>Opera Mini
-  <td>4% 
+    <td>Opera Mini
+    <td>4% 
 </table>
 
 
 <h2>2. Таблица с объединением ячеек</h2>
 <p>
 Таблица размеров окна браузера в зависимости от браузера, платформы и разрешения
+<table border="1">
+  <tr>
+    <th rowspan="2">Браузер 
+    <th colspan="3">Разрешение
+  <tr>
+    <th>640x480
+    <th>800x600
+    <th>1024x768 
+<tr>
+    <th colspan="4">Windows 
+<tr>
+    <td>Internet Explorer 5+
+    <td>620x303
+    <td>780x423
+    <td>1004x591 
+<tr>
+    <td>Netscape 6
+    <td>618x301
+    <td>778x421
+    <td>1002x589 
+<tr>
+    <td>Netscape 4.7
+    <td>620x286
+    <td>780x406
+    <td>1004x574 
+<tr>
+    <th colspan="4">Macintosh 
 
-Браузер 
-Разрешение
-640x480
-800x600
-1024x768 
-
-Windows 
-
-Internet Explorer 5+
-620x303
-780x423
-1004x591 
-
-Netscape 6
-618x301
-778x421
-1002x589 
-
-Netscape 4.7
-620x286
-780x406
-1004x574 
-
-Macintosh 
-Internet Explorer 5 	591x309 	751x429 	975x597 
-
+<tr>
+    <td>Internet Explorer 5
+    <td>591x309
+    <td>751x429
+    <td>975x597 
+</table>
 <h2>3. Вложенные таблицы</h2>
 <p>
 Пример макета WEB-страницы
