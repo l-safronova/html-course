@@ -10,36 +10,43 @@
 <form>
 
 <p>Фамилия
-<input type="text" name="fam">
+<input type="text" name="fam" placeholder="Иванов" size="30">
 
 <p>E-mail
 <input type="text" name="em">
 <p>Пароль
-<input type="password" name="pas">
+<input type="password" name="pas maxlength="5"">
 <p>Округ Москвы
 <select name="okr">
 	<option value="0">Не выбран
+	<optgroup label="Группа1">
 	<option value="1">центральный
-  	<option value="2">южный 
+  	<option value="2" selected>южный 
 	<option value="3">юго-западный
 	<option value="4">западный
+	</optgroup>
+	<optgroup label="Группа2">
 	<option value="5">северо-западный
-	<option value="6">северный 
+	<option value="6" disabled>северный 
 	<option value="7">северо-восточный
 	<option value="8">юго-восточный
 	<option value="9">восточный
+	</optgroup>
 </select>
 
 <p>Пол
 <p></p><input type="radio" name="pol"
-	 value="1"> М 
+	 value="1" accesskey="м"> М 
  <input type="radio" name="pol"
-	 value="2"> Ж 
+	 value="2" accesskey="ж"> Ж 
   <input type="radio" name="pol"
  value="0" checked> Не указан 
 
-
-<p>Ваши интересы
+<fieldset>
+	<legend>
+Ваши интересы
+</legend>
+	
 	<label><input type="checkbox" name="c1">
 	Компьютеры</label>
 	
@@ -69,7 +76,7 @@
 	
 	<label><input type="checkbox" name="c10">
 	Астрология</label>
-	
+	</fieldset>
 
 <p>Какие сайты Вы посещали в последнее время чаще
 <select name="sait" multiple size="5">
@@ -80,12 +87,40 @@
 	<option value="5">музыкальные
 </select>
 <p>Несколько слов о себе
-<textarea name="about"></textarea>
-
+<textarea name="about" rows="10" cols="20"></textarea>
 <p>очистка формы
 
-<p><input type="submit"
-value="регистрация">
+<p><button type="submit">
+<h2>регистрация</h2>
+<p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuzk4jxCxhCeCBW9xKFsc494KtQ9HWuL3CNreb3PqwJV2mXFWrpQ">
+</button>
+<p>
+	<input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuzk4jxCxhCeCBW9xKFsc494KtQ9HWuL3CNreb3PqwJV2mXFWrpQ">
+	
+	<!-- Просто кнопка -->
+	
+<p>
+	<button type="submit">
+<h2>регистрация</h2>
+
+</button>
+
+<p>
+	<button type="submit">
+<h2>регистрация</h2>
+	<p>
+	<a href="http://yandex.ru">Яндекс</a>
+<p>
+	<a href="http://google.com">Гугл</a>
+<p>	
+	<a href="http://yandex.ru">Яндекс</a>
+	
+</button>	
+
+
+
 </form>
 </body>
 </html>
