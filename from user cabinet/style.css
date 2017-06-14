@@ -1,0 +1,32 @@
+body {font-family:arial;
+    font-size:90%;
+    line-height:140%;
+    background:url(les3/images/b6.jpg) no-repeat fixed;
+    background-size:cover}
+    
+h1 {color:red}
+h2 {color:blue}
+h3 {color:green}
+.intro {color:brown;
+background:yellow;
+    text-indent:2em;
+    text-align:justify;
+    padding:1em;
+    border:3px solid #fff999;
+    border-radius:1em}
+    
+    .intro p {margin:0}
+#mona {color:brown}
+
+.list0 {color:purple}
+.list1 {color:blue}
+.list2 {color:green}
+.list3 {color:brown}
+
+.list4 {color:red}
+.list4 ul {color:blue}
+.list4 ul ul {color:green}
+
+
+.primer * {color:black}
+
