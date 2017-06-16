@@ -1,22 +1,25 @@
-body {font-family:arial;
+body {
+    font-family:arial;
     font-size:90%;
     line-height:140%;
     background:url(les3/images/b6.jpg) no-repeat fixed;
-    background-size:cover}
-    
+    background-size:cover;
+}
 h1 {color:red}
 h2 {color:blue}
 h3 {color:green}
-.intro {color:brown;
-background:yellow;
+.intro {
+    color:brown;
+    background:yellow;
     text-indent:2em;
     text-align:justify;
     padding:1em;
     border:3px solid #fff999;
-    border-radius:1em}
-    
+    border-radius:1em;
+}
     .intro p {margin:0}
 #mona {color:brown}
+.lips {color:red}
 
 .list0 {color:purple}
 .list1 {color:blue}
@@ -27,6 +30,36 @@ background:yellow;
 .list4 ul {color:blue}
 .list4 ul ul {color:green}
 
+.lista {color:red}
+.listb {color:blue}
 
 .primer * {color:black}
+.new {border-bottom:1px dashed red; color:red}
+
+.menu {list-style:none;
+    padding:0;
+}
+.menu.top li {float:left}
+.menu a {
+    border:1px solid green;
+    padding:5px;
+    margin:5px;
+    display:block;
+    border-radius:5px;
+    text-decoration:none}
+.menu.top a:link {background:#555; color:white}
+.menu.top a:visited {background:#555; color:yellow}
+.menu.top a:active {background:red; color:white}
+.menu.top a:hover {background:#888; color:yellow}
+
+.table1 {background:#eee}
+.table1 td:nth-child(2) {background:white}
+.chess {width:500px;
+    height:500px;
+    border-collapse:collapse;
+    border:1px solid black}
+.chess td {border:1px solid black;
+background:white}
+.tr.td:nth-child(odd) {color:black}
+
 

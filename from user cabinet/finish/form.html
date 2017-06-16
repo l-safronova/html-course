@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+<title>= анкета =</title>
+<meta charset="utf-8">
+</head>
+
+<body>
+	<main>
+    <header>
+            <!-- заголовок -->
+    <h2>Сайтостроение, сайтоводство и сайтолечение.</h2>
+
+    <!-- основная навигация  -->
+
+    <ol class="menu top">
+        <li><a href="index.html">Основная страница</a>
+
+        <li><a href="form.html">Регистрация</a>
+        
+        <li><a href="https://www.gazeta.ru"
+        target="_bland">Новости</a>
+                
+        <li><a href="https://www.pogoda.ru"
+        target="_bland">Погода</a>
+        
+        <li><a href="https://www.anekdot.ru/last/j.html"
+        target="_bland">Анекдоты</a>
+        
+    </ol>
+    </header>
+    <acticle>
+        <nav>
+                <ol class="menu left">
+        <li><a href="intro.html">Блочные и текстовые элементы
+        </a>
+    
+        <li><a href="links.html">Cсылки
+        </a>
+        
+        <li><a href="pict.html">Иллюстрации
+        </a>
+         
+        <li><a href="lists.html">Списки в HTML
+        </a>
+        
+        <li><a href="tables.html">Таблицы
+        </a>
+        
+        <li><a href="css1.html">Стили CSS
+        </a>
+    </ol>
+        </nav>
+        <section>
+            <!-- начало -->
+<h1>Регистрация</h1>
+<form>
+
+<p>Фамилия
+<input type="text" name="fam" placeholder="Иванов" size="30">
+
+<p>E-mail
+<input type="text" name="em">
+<p>Пароль
+<input type="password" name="pas maxlength"="5">
+<p>Округ Москвы
+<select name="okr">
+	<option value="0">Не выбран
+	<optgroup label="Группа1">
+	<option value="1">центральный
+  	<option value="2" selected>южный 
+	<option value="3">юго-западный
+	<option value="4">западный
+	</optgroup>
+	<optgroup label="Группа2">
+	<option value="5">северо-западный
+	<option value="6" disabled>северный 
+	<option value="7">северо-восточный
+	<option value="8">юго-восточный
+	<option value="9">восточный
+	</optgroup>
+</select>
+
+<p>Пол
+<p><input type="radio" name="pol"
+	 value="1" accesskey="м"> М 
+ <input type="radio" name="pol"
+	 value="2" accesskey="ж"> Ж 
+  <input type="radio" name="pol"
+ value="0" checked> Не указан 
+
+<fieldset>
+	<legend>
+Ваши интересы
+</legend>
+	
+	<label><input type="checkbox" name="c1">Компьютеры
+	</label>
+	
+	<label><input type="checkbox" name="c2">Автомобили
+	</label>
+	
+	<label><input type="checkbox" name="c3">Спорт
+	</label>
+	
+	<label><input type="checkbox" name="c4">Живопись
+	</label>
+	
+	<label><input type="checkbox" name="c5">Музыка
+	</label>
+	
+	<label><input type="checkbox" name="c6">Книги
+	</label>
+	
+	<label><input type="checkbox" name="c7">Философия
+	</label>
+	
+	<label><input type="checkbox" name="c8">Религия
+	</label>
+	
+	<label><input type="checkbox" name="c9">Психология
+	</label>
+	
+	<label><input type="checkbox" name="c10">Астрология
+	</label>
+	</fieldset>
+
+<p>Какие сайты Вы посещали в последнее время чаще
+<select name="sait" multiple size="5">
+	<option value="1">новостные
+	<option value="2">юморные
+	<option value="3">эротические
+	<option value="4">тематические
+	<option value="5">музыкальные
+</select>
+<p>Несколько слов о себе
+<textarea name="about" rows="10" cols="20"></textarea>
+<p>очистка формы
+
+<p><button type="submit">
+<h2>регистрация</h2>
+<p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuzk4jxCxhCeCBW9xKFsc494KtQ9HWuL3CNreb3PqwJV2mXFWrpQ">
+</button>
+
+</form>
+ <!-- конец! -->
+ </section>
+ <aside>Лента новостей</aside>
+ </article>
+ <footer>
+     Сайт сделан в апреле 2016
+ </footer>
+ </main>
+</body>
+</html>

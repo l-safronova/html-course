@@ -1,0 +1,146 @@
+@media screen and (min-width:480px)
+{
+    #rek {
+        width:300px;
+        height:300px;
+        background:red;
+        color:yellow;
+        font-size:2em;
+        text-align:center;
+        position:fixed;
+        top:300px;
+        left:40%}
+    #rek span {
+        position:absolute;
+        right:-20px;
+        top:-20px;
+        cursor:pointer
+    }
+    
+body {
+    font-family:arial;
+    font-size:90%;
+    line-height:140%;
+    background:url(images/b6.jpg) no-repeat
+    fixed !important;
+    background-size:cover !important}
+h1 {color:red}
+h2 {color:blue}
+h3 {color:green}
+.intro {
+    color:brown;
+    background:yellow;
+    text-indent:2em;
+    text-align:justify;
+    padding:1em;
+    border:3px solid #fff999;
+    border-radius:1em;
+}
+    .intro p {margin:0}
+#mona {color:brown}
+.lips {color:red}
+
+.list0 {color:purple}
+.list1 {color:blue}
+.list2 {color:green}
+.list3 {color:brown}
+
+.list4 {color:red}
+.list4 ul {color:blue}
+.list4 ul ul {color:green}
+
+.lista {color:red}
+.listb {color:blue}
+
+.primer * {color:black}
+.new {border-bottom:1px dashed red; color:red}
+
+.menu {list-style:none;
+    padding:0;
+}
+.menu.top li {float:left}
+.menu a {
+    border:1px solid green;
+    padding:5px;
+    margin:5px;
+    display:block;
+    border-radius:5px;
+    text-decoration:none;
+    box-shadow:2px 2px 2px #555
+}
+.menu.top a:link {background:#555; color:white}
+.menu.top a:visited {background:#555; color:yellow}
+.menu.top a:active {background:red; color:white}
+.menu.top a:hover {background:#888; color:yellow}
+
+.menu.left a:link {background:#555; color:white}
+.menu.left a:visited {background:#555; color:yellow}
+.menu.left a:active {background:red; color:white}
+.menu.left a:hover {background:#888; color:yellow}
+
+.table1 {background:#eee}
+.table1 td:nth-child(2) {background:white}
+.chess {
+    width:500px;
+    height:500px;
+    border-collapse:collapse;
+    border:1px solid black;
+}
+
+.chess tr:nth-child(odd) td:nth-child(odd) {
+    border:1px solid black;
+    background:white;
+}
+
+.chess tr:nth-child(even) td:nth-child(even) {
+    border:1px solid black;
+    background:black;
+}
+
+/* макет */
+main, header, article, nav,
+section, aside, footer {display: block}
+main {
+    width: 900px;
+    border:1px solid red;
+    margin:auto
+    
+}
+header {
+    background:
+    rgba(250,250,250,0.3);
+    height:auto;
+    overflow:auto;
+}
+    
+article {clear:both}
+nav {
+    width:150px;
+    background:
+    rgba(250,250,250,0.3);
+    height:auto;
+    float:left
+}
+section {
+    width:580px;
+    float:left;
+    margin:0 10px;
+}
+aside {
+    width:150px;
+    background:
+    rgba(250,250,250,0.3);
+    height:200px;
+    float:left
+}
+footer {
+    background:#ccc;
+    height:50px;
+    clear:both}
+}
+@media screen and (max-width:479px)
+{
+ h1 {color:red}   
+}
+
+
